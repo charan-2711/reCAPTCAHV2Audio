@@ -1,0 +1,1 @@
+In this , we tried to solve the reCAPTCHA v2 by solving audio challenge using OpenAI's Whisper library. And made Flask API which takes the audio and gives text as response. We tested this on a reCPATCHA demo Webpage in 2captcha websie.
