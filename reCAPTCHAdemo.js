@@ -34,10 +34,12 @@ const delay = (milliseconds) => new Promise((resolve) => setTimeout(resolve, mil
 
     await bframe.waitForSelector(".rc-audiochallenge-tdownload-link")
     
+    // Get URL of audio from the website
     const href = await bframe.$eval(".rc-audiochallenge-tdownload-link", (elm) => elm.href);
 
     // console.log(href)
 
+    // Send request with Audio URL to Flask API to get text as response.
     const response = await fetch('http://localhost:5000',
                                 {
                                     method: 'POST',
